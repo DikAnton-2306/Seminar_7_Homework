@@ -9,11 +9,15 @@ void AverageColumns(int[,] arr)
     for (int i = 0; i < arr.GetLength(1); i++)
     {
         double sum = 0;
-        for (int j = 0; j < arr.GetLength(0); j++)
+        int j = 0;
+        for ( ; j < arr.GetLength(0); j++)
         {
-            if(j <= arr.GetLength(0))
+            // if(j <= arr.GetLength(0))
                 sum += arr[j, i];
         }
+        // System.Console.WriteLine(Math.Round(sum/arr.GetLength(0), 1));
+        if (i != arr.GetLength(1)) Console.Write("Среднее арифметическое каждого столбца; ");
+        else Console.Write(". ");
         System.Console.WriteLine(Math.Round(sum/arr.GetLength(0), 1));
     }
 }
